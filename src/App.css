@@ -3,6 +3,8 @@ body{
   background-image: url(backgroung_image.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: cover;
+
 }
 .selectForm {
   display:flex;
@@ -12,4 +14,8 @@ body{
 .form{
   display:flex;
   justify-content: center;
+}
+
+.App {
+  min-height: 100vh;
 }
