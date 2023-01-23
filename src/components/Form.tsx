@@ -1,8 +1,8 @@
-import React, { createRef } from "react";
+import React from "react";
 import { formProps } from "../script/globalInterface";
-import { typeList, urlPrefix, urlPerPage } from "../script/globalVariable";
-import { by_name, by_city, by_dist_lat, by_dist_lon, by_state, by_postal_code, by_type, by_country } from "../script/globalRef";
-import './Form.scss'
+import { by_city, by_country, by_dist_lat, by_dist_lon, by_name, by_postal_code, by_state, by_type } from "../script/globalRef";
+import { typeList } from "../script/globalVariable";
+import './Form.scss';
 
 const Form = ({ type, handleSubmit }: formProps) => {
 
