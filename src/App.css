@@ -1,0 +1,15 @@
+body{
+  margin: 0;
+  background-image: url(backgroung_image.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.selectForm {
+  display:flex;
+  justify-content: center;
+  gap : 16px
+}
+.form{
+  display:flex;
+  justify-content: center;
+}
