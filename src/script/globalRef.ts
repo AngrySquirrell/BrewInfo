@@ -8,3 +8,4 @@ export const by_state = createRef<HTMLInputElement>();
 export const by_postal_code = createRef<HTMLInputElement>();
 export const by_type = createRef<HTMLSelectElement>();
 export const by_country = createRef<HTMLInputElement>();
+export const free_search = createRef<HTMLInputElement>();

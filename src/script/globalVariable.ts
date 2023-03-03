@@ -1,4 +1,4 @@
-import { buttonFormat, typeFormat } from "./globalInterface";
+import { buttonFormat, formProps, typeFormat } from "./globalInterface";
 
 export const urlPrefix: string = `https://api.openbrewerydb.org/breweries?`;
 export const urlPerPage: number = 25; 

@@ -6,7 +6,8 @@ export interface formProps {
         | "by_state"
         | "by_postal"
         | "by_type"
-        | "by_country";
+        | "by_country"
+        | "free_search";
     handleSubmit:  React.FormEventHandler<HTMLFormElement>
 }
 export interface breweryProps {

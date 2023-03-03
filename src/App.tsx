@@ -13,6 +13,7 @@ import {
     by_postal_code,
     by_type,
     by_country,
+    free_search,
 } from "./script/globalRef";
 
 function App() {
@@ -40,25 +41,31 @@ function App() {
         let urlSuffix = {
             by_name: `by_name=${by_name.current?.value
                 ?.replace(" ", "%20")
-                .toLowerCase()}&per_page=${urlPerPage}`,
+                .toLowerCase()}`,
             by_city: `by_city=${by_city.current?.value
                 ?.replace(" ", "%20")
-                .toLowerCase()}&per_page=${urlPerPage}`,
-            by_dist: `by_dist=${by_dist_lat.current?.value},${by_dist_lon.current?.value}&per_page=${urlPerPage}`,
+                .toLowerCase()}`,
+            by_dist: `by_dist=${by_dist_lat.current?.value},${by_dist_lon.current?.value}`,
             by_state: `by_state=${by_state.current?.value
                 ?.replace(" ", "%20")
                 .toLowerCase()}&per_page=${urlPerPage}`,
-            by_postal: `by_postal=${by_postal_code.current?.value}&per_page=${urlPerPage}`,
-            by_type: `by_type=${by_type}&per_page${urlPerPage}`,
+            by_postal: `by_postal=${by_postal_code.current?.value}`,
+            by_type: `by_type=${by_type}`,
             by_country: `by_country=${by_country.current?.value
                 ?.replace(" ", "%20")
-                .toLowerCase()}&per_page=${urlPerPage}`,
+                .toLowerCase()}`,
+            free_search: `search=${free_search.current?.value
+                ?.replace(" ", "%20")
+                .toLowerCase()}`,
         };
 
         event.preventDefault();
-        let response = await fetch(`${urlPrefix}${urlSuffix[type]}`, {
-            mode: "cors",
-        });
+        let response = await fetch(
+            `${urlPrefix}${urlSuffix[type]}&per_page=${urlPerPage}`,
+            {
+                mode: "cors",
+            }
+        );
         let refinedResponse = await response.json();
         setMemory([...refinedResponse]);
     };

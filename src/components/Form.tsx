@@ -1,6 +1,6 @@
 import React from "react";
 import { formProps } from "../script/globalInterface";
-import { by_city, by_country, by_dist_lat, by_dist_lon, by_name, by_postal_code, by_state, by_type } from "../script/globalRef";
+import { by_city, by_country, by_dist_lat, by_dist_lon, by_name, by_postal_code, by_state, by_type, free_search } from "../script/globalRef";
 import { typeList } from "../script/globalVariable";
 import './Form.scss';
 
@@ -112,6 +112,18 @@ const Form = ({ type, handleSubmit }: formProps) => {
                     key={"country"}
                     name="country"
                     ref={by_country}
+                    type="text"
+                    placeholder=""
+                />
+            </>
+        ),
+        free_search: (
+            <>
+                <label htmlFor="free_search">Search : </label>
+                <input
+                    key={"free_search"}
+                    name="free_search"
+                    ref={free_search}
                     type="text"
                     placeholder=""
                 />
