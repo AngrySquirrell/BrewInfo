@@ -1,7 +1,7 @@
 import { buttonFormat, formProps, typeFormat } from "./globalInterface";
 
-export const urlPrefix: string = `https://api.openbrewerydb.org/breweries?`;
 export const urlPerPage: number = 25; 
+export const urlPrefix: string = `https://api.openbrewerydb.org/breweries?`;
 export const typeList: typeFormat[] = [
     { value: "micro", label: "Micro", desc: "Most craft breweries" },
     {
